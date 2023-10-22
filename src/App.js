@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import MovieCard from "./MovieCard";
 
 import './App.css';
@@ -15,13 +15,6 @@ const App = () => {
         const data = await response.json();
         setMovies(data.Search);
     }
-    useEffect(() =>{
-        searchMovies('batman');
-
-
-    }, []);
-
-
     return(
        <div className="app">
         <h1>Movieland</h1>
